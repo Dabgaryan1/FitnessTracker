@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemExercise"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
+    android:background="#212121">
+
+    <!-- Top row: exercise name + delete button -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp">
+
+        <TextView
+            android:id="@+id/tvExerciseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bench Press"
+            android:textColor="#AFCBFF"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/btnDeleteExercise"
+            android:layout_marginEnd="12dp" />
+
+        <ImageView
+            android:id="@+id/btnDeleteExercise"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_red_x"
+            android:contentDescription="Delete exercise"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <!-- Bottom row: type and muscle group -->
+    <TextView
+        android:id="@+id/tvExerciseDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Barbell • Chest"
+        android:textColor="#AFCBFF"
+        android:textSize="13sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvPreviousStats"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last time: Set 1:  reps x  lbs"
+        android:textColor="#BDBDBD"
+        android:textSize="13sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone" />
+
+    <!-- Sets and reps -->
+    <TextView
+        android:id="@+id/tvSetsReps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Add set button -->
+    <Button
+        android:id="@+id/btnAddSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Add Set"
+        android:backgroundTint="#AFCBFF"
+        android:textColor="#212121"
+        android:textSize="13sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="12dp" />
+
+</LinearLayout>

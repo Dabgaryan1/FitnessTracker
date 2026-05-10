@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Onboarding"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#AFCBFF"
+    android:padding="24dp">
+
+    <!--Onboarding text-->
+    <TextView
+        android:id="@+id/tvOnboarding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center"/>
+
+    <!-- Prompt user to enter info -->
+    <TextView
+        android:id="@+id/tvPrompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Enter The Following:"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+
+    <!--Enter Age-->
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter Age"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="#212121"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+
+    <!--Enter Height-->
+    <EditText
+        android:id="@+id/etHeight"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter Height"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="#212121"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp"/>
+
+    <!--Enter Weight-->
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter Weight"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="#212121"
+        android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <!--Login Button-->
+    <Button
+        android:id="@+id/btnOnboardingSave"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Submit"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:backgroundTint="#6FAF63"
+        android:layout_marginBottom="40dp"/>
+</LinearLayout>

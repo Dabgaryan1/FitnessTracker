@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/CreateWorkout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AFCBFF"
+    android:padding="24dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/titleNewWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Workout"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Check Mark -->
+    <TextView
+        android:id="@+id/CheckMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="✓"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:clickable="true"/>
+
+    <!-- Top Divider -->
+    <View
+        android:id="@+id/topDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/titleNewWorkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Workout Name Label -->
+    <EditText
+        android:id="@+id/WorkoutName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name of Workout"
+        android:textSize="28sp"
+        android:textColor="#212121"
+        android:background="@android:color/transparent"
+        android:padding="12dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/topDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divider under Workout Name -->
+    <View
+        android:id="@+id/nameDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/WorkoutName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Time Label -->
+    <EditText
+        android:id="@+id/WorkoutTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Time('HH:MM')"
+        android:textSize="28sp"
+        android:textColor="#212121"
+        android:background="@android:color/transparent"
+        android:padding="12dp"
+        android:inputType="text"
+        android:maxLength="8"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/nameDivider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Divider under Time -->
+    <View
+        android:id="@+id/timeDivider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="#000000"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintTop_toBottomOf="@id/WorkoutTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Bottom Tab -->
+    <View
+        android:id="@+id/bottomBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/bottom_nav_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Safe area inside the blue bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNavContent"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="@id/bottomBarBackground"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBarBackground"
+        app:layout_constraintStart_toStartOf="@id/bottomBarBackground"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBackground">
+
+        <!-- ChatBot Nav -->
+        <ImageButton
+            android:id="@+id/navLeft"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_chat"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Chat Tab"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/navViewWorkout"
+            app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+        <!-- View Workout Nav -->
+        <ImageButton
+            android:id="@+id/navViewWorkout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_workout_list"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="View Workouts Tab"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navLeft"
+            app:layout_constraintEnd_toStartOf="@id/navCenter" />
+
+        <!-- Create Workout Nav -->
+        <ImageButton
+            android:id="@+id/navCenter"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/center_nav_circle"
+            android:scaleType="centerInside"
+            android:padding="1dp"
+            android:contentDescription="Create Workout Tab"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navViewWorkout"
+            app:layout_constraintEnd_toStartOf="@id/navRight" />
+
+        <!-- View Profile Nav -->
+        <ImageButton
+            android:id="@+id/navRight"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/ic_profile"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Profile Tab"
+            android:layout_marginBottom="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navCenter"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

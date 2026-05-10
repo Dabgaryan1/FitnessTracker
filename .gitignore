@@ -1,0 +1,18 @@
+# Android/Gradle
+.gradle/
+build/
+*/build/
+
+# Local/private config
+local.properties
+app/google-services.json
+secrets.properties
+.env
+
+# Android Studio
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db

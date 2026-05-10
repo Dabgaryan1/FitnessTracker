@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/CreateAccount"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#AFCBFF"
+    android:padding="24dp">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/back_arrow"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="Back"
+        android:clickable="true"/>
+
+    <!--Create Account Text-->
+    <TextView
+        android:id="@+id/tvCreateAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Account"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+
+    <!-- Enter Email -->
+    <EditText
+        android:id="@+id/etNewEmail"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter New Email"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="#212121"
+        android:inputType="text" />
+
+    <!-- Enter New Password -->
+    <EditText
+        android:id="@+id/etNewPassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter New Password"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="#212121"
+        android:inputType="text" />
+
+    <!-- Repeat Password -->
+    <EditText
+        android:id="@+id/etRepeatPassword"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:hint="Enter New Password Again"
+        android:textSize="20sp"
+        android:padding="12dp"
+        android:backgroundTint="#212121"
+        android:inputType="text" />
+
+    <!--Login Error Message(hidden at first)-->
+    <TextView
+        android:id="@+id/loginError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invalid Email or Password"
+        android:textColor="#D32F2F"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <!--Confirm Account Button-->
+    <Button
+        android:id="@+id/btnConfirmAccount"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Create New Account"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:backgroundTint="#6FAF63"
+        android:layout_marginBottom="40dp"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/AiChat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#AFCBFF">
+
+    <!-- Back Button -->
+    <ImageButton
+        android:id="@+id/backArrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginStart="24dp"
+        android:src="@drawable/back_arrow"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:contentDescription="Back"
+        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- RepBot Title -->
+    <TextView
+        android:id="@+id/repBotTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RepBot"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/backArrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Dumbbell icon beside title -->
+    <ImageView
+        android:id="@+id/dumbbellIcon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/dumbbell"
+        app:tint="#000000"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/repBotTitle"
+        app:layout_constraintStart_toEndOf="@id/repBotTitle" />
+
+    <!-- Divider under title -->
+    <View
+        android:id="@+id/titleDivider"
+        android:layout_width="0dp"
+        android:layout_height="4dp"
+        android:background="#212121"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintTop_toBottomOf="@id/repBotTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Chat Messages -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@id/titleDivider"
+        app:layout_constraintBottom_toTopOf="@id/messageInputContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- message box -->
+    <LinearLayout
+        android:id="@+id/messageInputContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="#DCE8FF"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomBarBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:id="@+id/messageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Ask RepBot something..."
+            android:textColor="#212121"
+            android:textSize="16sp"
+            android:background="@android:color/transparent"
+            android:padding="8dp" />
+
+        <ImageButton
+            android:id="@+id/sendButton"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_send"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Send"
+            app:tint="#212121" />
+    </LinearLayout>
+
+    <!-- Bottom Tab -->
+    <View
+        android:id="@+id/bottomBarBackground"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:background="@drawable/bottom_nav_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Safe area inside the blue bar -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomNavContent"
+        android:layout_width="0dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="@id/bottomBarBackground"
+        app:layout_constraintBottom_toBottomOf="@id/bottomBarBackground"
+        app:layout_constraintStart_toStartOf="@id/bottomBarBackground"
+        app:layout_constraintEnd_toEndOf="@id/bottomBarBackground">
+
+        <!-- ChatBot Nav -->
+        <ImageButton
+            android:id="@+id/navLeft"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/ic_chat"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Chat Tab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/navViewWorkout"
+            app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+        <!-- View Workout Nav -->
+        <ImageButton
+            android:id="@+id/navViewWorkout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/ic_workout_list"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="View Workouts Tab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navLeft"
+            app:layout_constraintEnd_toStartOf="@id/navCenter" />
+
+        <!-- Create Workout Nav -->
+        <ImageButton
+            android:id="@+id/navCenter"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/ic_add"
+            android:background="@drawable/center_nav_circle"
+            android:scaleType="centerInside"
+            android:padding="1dp"
+            android:contentDescription="Create Workout Tab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navViewWorkout"
+            app:layout_constraintEnd_toStartOf="@id/navRight" />
+
+        <!-- View Profile Nav -->
+        <ImageButton
+            android:id="@+id/navRight"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/ic_profile"
+            android:background="@android:color/transparent"
+            android:scaleType="fitCenter"
+            android:contentDescription="Profile Tab"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/navCenter"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="12dp"
+    android:id="@+id/ItemWorkout">
+
+    <!-- Top row -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#212121"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:gravity="center_vertical">
+
+        <!-- Title of workout -->
+        <TextView
+            android:id="@+id/workoutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#AFCBFF" />
+
+        <!-- workout date -->
+        <TextView
+            android:id="@+id/workoutDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="18sp"
+            android:textColor="#AFCBFF"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/deleteButton"
+            android:layout_marginEnd="36dp"
+            android:layout_alignParentEnd="true" />
+
+        <!-- delete button -->
+        <ImageView
+            android:id="@+id/deleteButton"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/ic_red_x"
+            android:contentDescription="Delete workout"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <!-- Expandable details -->
+    <TextView
+        android:id="@+id/workoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#212121"
+        android:padding="16dp"
+        android:text=""
+        android:textSize="22sp"
+        android:textColor="#AFCBFF"
+        android:visibility="gone" />
+
+</LinearLayout>

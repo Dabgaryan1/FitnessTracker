@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <!-- User message (right aligned) -->
+    <TextView
+        android:id="@+id/userMessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="#212121"
+        android:textColor="#FFFFFF"
+        android:padding="12dp"
+        android:layout_marginStart="64dp"
+        android:textSize="15sp" />
+
+    <!-- Bot message (left aligned) -->
+    <TextView
+        android:id="@+id/botMessageText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#DCE8FF"
+        android:textColor="#212121"
+        android:padding="12dp"
+        android:layout_marginEnd="64dp"
+        android:textSize="15sp" />
+
+</FrameLayout>
